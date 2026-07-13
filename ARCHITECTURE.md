@@ -280,7 +280,6 @@ Authenticated API calls:
 
 | Repo | Description | Status |
 |------|-------------|--------|
-| `utilitybelt` | TGS Staff Utility Belt | Private, older tooling |
 | `group_tools` | Elgg Group plugin fork | Public fork, legacy |
 | `Tidypics` | Elgg photo gallery fork | Public fork, legacy |
 | `Elgg` | Social networking engine fork | Public fork, legacy |
