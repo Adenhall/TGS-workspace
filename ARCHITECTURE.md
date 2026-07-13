@@ -148,6 +148,36 @@ THINKGlobalSchool's application ecosystem consists of two student-facing mobile 
 
 ---
 
+### 4. utilitybelt (LEGACY)
+
+**Purpose:** Staff utility belt for student evaluation, attendance tracking, and weXplore trip management. This is the ORIGINAL backend that THINKStatus connected to via Meteor DDP protocol before migrating to the Wallet backend REST API.
+
+**Status:** ⚠️ LEGACY — No longer actively maintained. Listed in the org for historical reference.
+
+**Tech Stack:**
+- Meteor 1.4.3.2 (very old — requires Node.js 4.8.7)
+- MongoDB 4
+- Redis (for redis-oplog pub/sub)
+- Blaze templates (Meteor default UI framework)
+- Bootstrap CSS
+- Deployed via Meteor Up (mup) to EC2 (deployment now obsolete)
+
+**Key Features:**
+- Student management and evaluation forms
+- Attendance tracking
+- weXplore trip data (locations, dates, student evaluations)
+- Staff roles and permissions
+- Push notifications (config.push.json)
+
+**Entry Point:** Standard Meteor app entry ( → )
+
+**Historical Connection:**
+- THINKStatus originally connected via  (Meteor DDP client) to this server
+- The  dependency in THINKStatus-ReactNative is a legacy artifact from this connection
+- THINKStatus has since migrated to REST API calls to THINK-Wallet-backend
+
+---
+
 ### 4. THINKapps-certificates
 
 **Purpose:** Shared iOS code signing repository managed by [fastlane match](https://docs.fastlane.tools/actions/match/).
@@ -280,3 +310,4 @@ Both apps use **Google Sign-In** restricted to `@thinkglobalschool.com` domain:
 - **THINKWallet-backend → HubSpot**: CRM sync for status data
 - **THINKWallet-backend → Firebase**: ID token verification for Google auth
 - **THINKapps-certificates → Both iOS apps**: Code signing for development, ad hoc, and distribution builds
+- **utilitybelt → THINKStatus (HISTORICAL)**: Original DDP backend, now replaced by THINK-Wallet-backend REST API
