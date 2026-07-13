@@ -178,7 +178,7 @@ THINKGlobalSchool's application ecosystem consists of two student-facing mobile 
 
 ---
 
-### 4. THINKapps-certificates
+### 5. THINKapps-certificates
 
 **Purpose:** Shared iOS code signing repository managed by [fastlane match](https://docs.fastlane.tools/actions/match/).
 
